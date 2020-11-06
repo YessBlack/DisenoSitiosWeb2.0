@@ -19,6 +19,7 @@ body {
     width: 100%;
     position: sticky;
     top: 0px;
+    height: 70px;
 }
 /*logo*/
 .logo{
