@@ -16,6 +16,9 @@ body {
     justify-content: space-between;
     background-color: var(--colorP2);
     color: #FFFFFF;  
+    width: 100%;
+    position: sticky;
+    top: 0px;
 }
 /*logo*/
 .logo{
@@ -23,35 +26,71 @@ body {
     width: 250px;
     padding: .2em;
 }
-/*menu*/
-.menu{
-    display: flex;
-    padding: .2em;
-}
-.menu-list {
+/*MENU*/
+nav ul {
+    list-style: none;
     padding: 0;
 }
-.menu-item{
-    display: inline;
+nav li {
+    line-height: 3rem;
+    position: relative;
 }
-.menu-link {
+nav li ul {
+    position: absolute;
+}
+nav a {
     text-decoration: none;
-    color: white;
-    padding: .5em;
-    padding-right: 1em;
+    color: #FFFFFF;
+    padding: 0 2.5em;
+    display: block;
 }
-.menu-link:hover {
+nav a:hover {
     border-bottom: 4px solid var(--colorP1);
 }
-.subtitle {
-    color:  #F47920;
+nav li ul {
+    display: none;
 }
-img {
+nav li:hover ul {
+    display: block;
+}
+/*PRIMER NIVEL*/
+nav ul {
+    display: table;
+    width: 100%;
+}
+nav > ul > li {
+    float: left;
+}
+/*SEGUNDO NIVEL*/
+nav li li {
+    background-color: var(--colorP2);
+    max-height: 0;
+    display: none;
+    width: 162px;
+}
+nav li:hover > ul > li{
+    max-height: 500px;
+    display: block;
+}
+nav > ul > li > ul {
+    top: 100%;
+}
+.subtitle {
+    color: var(--colorP1);
+}
+.imgPredeterminado {
     max-width: 100%;
     width: 520px;
     padding-top: .8em;
     display: block;
-    margin: .5em;
+   margin: .5em;
+}
+.banner img {
+    max-width: 100%;
+    width: 1336px;
+    background-position: fixed;
+    z-index: -10;
+    margin-bottom: .5em;
 }
 .content {
     display: flex;
