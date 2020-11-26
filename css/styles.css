@@ -8,7 +8,7 @@ body {
     background-color: var(--backgroundP);
     font-family: 'Lato', sans-serif;
     line-height: 1.8em;
-    font-size: 1.05em;
+    font-size: 1em;
 }
 /*header*/
 .header {
@@ -46,7 +46,7 @@ nav a {
     display: block;
 }
 nav a:hover {
-    border-bottom: 4px solid var(--colorP1);
+    border-bottom: 3px solid var(--colorP1);
 }
 nav li ul {
     display: none;
@@ -67,7 +67,7 @@ nav li li {
     background-color: var(--colorP2);
     max-height: 0;
     display: none;
-    width: 162px;
+    width: 158px;
 }
 nav li:hover > ul > li{
     max-height: 500px;
@@ -84,7 +84,7 @@ nav > ul > li > ul {
     width: 520px;
     padding-top: .8em;
     display: block;
-   margin: .5em;
+    margin: .5em;
 }
 .banner img {
     max-width: 100%;
@@ -112,8 +112,21 @@ aside {
     background-color: #F47920;
     display: inline-block;
 }
-.recurso-uno, .recurso-dos {
-    margin-left: 10%;
+.recurso-uno, .recurso-dos{
+    position: relative;
+    padding-bottom: 2%;
+    z-index: -10;
+    max-width: 100%;
+    margin-left: 8em;
+}
+.autoEvaluc {
+    width: 90%;
+    height: 600px;
+    padding: 1em;
+}
+.container {
+    display: block;
+    margin-left: 6em;
 }
 /*footer*/
 .footer {
@@ -123,4 +136,18 @@ aside {
     display: inline-block;
     margin-top: 1em;
     width: 100%;
+}
+
+/*Querys*/
+
+@media only screen and (max-width: 1024px) {
+    aside {
+        display: none;
+    }
+    .recurso-uno, .recurso-dos{
+       margin-left: 0;
+    }
+    nav {
+        display: none;
+    }
 }
