@@ -84,8 +84,8 @@ nav > ul > li > ul {
     color: var(--colorP1);
 }
 .imgPredeterminado {
-    max-width: 80%;
-    width: 520px;
+    max-width: 520px;
+    width: 100%;
     padding-top: .8em;
     display: block;
 }
@@ -127,9 +127,12 @@ nav > ul > li > ul {
     height: 600px;
     padding: 1em;
 }
-contain.er {
+.container {
     display: block;
     margin-left: 6em;
+}
+.videoFinal {
+    margin-left: 2em;
 }
 /*footer*/
 .footer {
